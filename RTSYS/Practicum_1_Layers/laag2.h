@@ -5,13 +5,29 @@
 
 using namespace std;
 
-class Facade2{
-	public Facade1
+class L2Facade{
+private:
+    L1Facade* L1;
+public:
+    virtual ~L2Facade(){}
+    virtual void service() = 0;
+    virtual L1Facade* laag1(){ return L1; }
+    virtual void connectLow(L1Facade* l1){ L1 = l1; }
 };
 
 class L2Server{
+public:
+    virtual ~L2Server(){}
+    virtual void layerRequest() = 0;
 };
 
-class Laag2Impl : public Facade2, public L1Server{
-	public L2Server;
+class L2Impl : public L2Facade, public L1Server{
+private:
+    L2Server* L2;
+public:
+    virtual void service();
+    virtual void layerRequest();
+    virtual void connectHigh(L2Server* s);
 };
+
+#endif
