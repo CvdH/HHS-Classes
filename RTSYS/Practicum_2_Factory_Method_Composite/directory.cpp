@@ -2,32 +2,35 @@
 
 Directory::Directory(string n){
     name = n;
+    cout << "Directory '" << name << "' created with default size 1024 Bytes\n";
 }
 
 void Directory::add(Item *item){
-    list.push_front(x);
+    fileList.push_front(item);
+    cout << "Item '" << item->getName() << "' with size " << item->getSize() << " Bytes added to Directory '" << name << "'\n";
 }
 
 void Directory::rem(Item *item){
-    list.remove(x);
+    fileList.remove(item);
+    cout << "Item '" << item->getName() << "' with size " << item->getSize() << " Bytes removed from Directory '" << name << "'\n";
 }
 
-List<Item*> Directory::getList(){
-    return list;
+list<Item*> Directory::getList(){
+    return fileList;
 }
 
 void Directory::show(){
-    cout << name << " " << getSize() << "B\n";
+    cout << "Directory '" << name << "' has size " << getSize() << " Bytes\n";
 }
 
-/*const string Directory::getName(){
+const string Directory::getName(){
     return name;
-}*/
+}
 
 int Directory::getSize(){
     int temp = 0;
 
-    for(Item* i : list){
+    for(Item* i : fileList){
         temp += i->getSize();
     }
 

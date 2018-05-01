@@ -7,5 +7,6 @@ int main()
 {
     OperatingSystem os;
     os.run();
+    //OperatingSystem::run();
     return 0;
 }
