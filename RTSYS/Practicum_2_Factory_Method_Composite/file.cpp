@@ -1,13 +1,13 @@
 #include "headers.h"
 
-File::File(String n, int s){
+File::File(string n, int s){
     name = n;
     size = s;
 }
 
-const String File::getName(){
+/*const string File::getName(){
     return name;
-}
+}*/
 
 int File::getSize(){
     return size;

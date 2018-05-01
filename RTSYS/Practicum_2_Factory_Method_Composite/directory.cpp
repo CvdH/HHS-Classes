@@ -1,6 +1,6 @@
 #include "headers.h"
 
-Directory::Directory(String n){
+Directory::Directory(string n){
     name = n;
 }
 
@@ -17,13 +17,19 @@ List<Item*> Directory::getList(){
 }
 
 void Directory::show(){
-    //TODO
+    cout << name << " " << getSize() << "B\n";
 }
 
-const String Directory::getName(){
+/*const string Directory::getName(){
     return name;
-}
+}*/
 
 int Directory::getSize(){
-    //TODO
+    int temp = 0;
+
+    for(Item* i : list){
+        temp += i->getSize();
+    }
+
+    return temp + 1024;
 }

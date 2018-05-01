@@ -14,9 +14,9 @@ public:
 
 class Item{
 public:
-    String name;
+    string name;
     virtual ~Item(){}
-    virtual const String getName() = 0;
+    virtual const string getName() {return name;}
     virtual int getSize() = 0;
     virtual void show() = 0;
     virtual void add( Item* item) = 0;
@@ -26,15 +26,15 @@ public:
 class File : public Item{
 public:
     int size;
-    File(String n, int s);
+    File(string n, int s);
 };
 
 class Directory : public Item{
 private:
-    List<Item*> list;
+    list<Item*> fileList;
 public:
-    Directory(String naam);
-    List<Item*> getList();
+    Directory(string naam);
+    list<Item*> getList();
 };
 
 #endif // HEADERS_H
