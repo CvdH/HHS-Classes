@@ -1,24 +1,16 @@
-#include "headers.h"
+#include "operatingsystem.h"
 
 void OperatingSystem::run ( ){
-    Item* f = new File ("1.txt", 1000);
-    Item* D = new Directory ("dir A");
+    Item* f = makeFile("1.txt", 1000);
+    Item* D = makeDir("dir A");
     D->add ( f );
-    cout << endl;
-
     D->show ( );
-    cout << endl;
 
-    Item* f2 = new File("2.jpg", 120579);
-    Item* D2 = new Directory("dir B");
+    Item* f2 = makeFile("2.jpg", 120579);
+    Item* D2 = makeDir("dir B");
     D2->add(f2);
-    cout << endl;
 
     D2->show();
-    cout << endl;
-
     D->add(D2);
-    cout << endl;
-
     D->show();
 }

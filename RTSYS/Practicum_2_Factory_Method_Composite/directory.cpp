@@ -1,4 +1,4 @@
-#include "headers.h"
+#include "directory.h"
 
 Directory::Directory(string n){
     name = n;
@@ -7,12 +7,12 @@ Directory::Directory(string n){
 
 void Directory::add(Item *item){
     fileList.push_front(item);
-    cout << "Item '" << item->getName() << "' with size " << item->getSize() << " Bytes added to Directory '" << name << "'\n";
+    cout << "Item '" << item->getName() << "' with size " << item->getSize() << " Bytes added to Directory '" << name << "'\n\n";
 }
 
 void Directory::rem(Item *item){
     fileList.remove(item);
-    cout << "Item '" << item->getName() << "' with size " << item->getSize() << " Bytes removed from Directory '" << name << "'\n";
+    cout << "Item '" << item->getName() << "' with size " << item->getSize() << " Bytes removed from Directory '" << name << "'\n\n";
 }
 
 list<Item*> Directory::getList(){

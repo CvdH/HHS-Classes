@@ -7,7 +7,12 @@ SOURCES += \
         main.cpp \
     operatingsystem.cpp \
     file.cpp \
-    directory.cpp
+    directory.cpp \
+    simpleoperatingsystem.cpp
 
 HEADERS += \
-    headers.h
+    operatingsystem.h \
+    simpleoperatingsystem.h \
+    item.h \
+    file.h \
+    directory.h

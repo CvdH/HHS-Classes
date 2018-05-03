@@ -1,12 +1,17 @@
 #include <iostream>
-#include "headers.h"
+
+#include "simpleoperatingsystem.h"
 
 using namespace std;
 
 int main()
 {
-    OperatingSystem os;
+    /*OperatingSystem os;
     os.run();
-    //OperatingSystem::run();
+    OperatingSystem::run();
+    return 0;*/
+
+    SimpleOperatingSystem OS;
+    OS.run();
     return 0;
 }

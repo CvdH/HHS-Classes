@@ -1,4 +1,7 @@
-#include "headers.h"
+#include "file.h"
+
+#include <iostream>
+#include <string>
 
 File::File(string n, int s){
     name = n;
