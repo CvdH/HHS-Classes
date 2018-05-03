@@ -15,6 +15,7 @@ public:
     virtual const string getName() = 0;
     virtual int getSize() = 0;
     virtual void show() = 0;
+    virtual void showVerbose(int level) = 0;
     virtual void add( Item* item) = 0;
     virtual void rem( Item* item) = 0;
 };

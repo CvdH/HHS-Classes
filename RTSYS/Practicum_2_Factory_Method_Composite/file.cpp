@@ -6,7 +6,7 @@
 File::File(string n, int s){
     name = n;
     size = s;
-    cout << "File '" << name <<"' created with size " << size << " Bytes\n";
+    cout << "Created File '" << name <<"' with size " << size << " Bytes\n";
 }
 
 const string File::getName(){
@@ -18,7 +18,11 @@ int File::getSize(){
 }
 
 void File::show(){
-    cout << name << " " << size << " Bytes\n";
+    cout << "Show File: " << name << " has size " << size << " Bytes\n";
+}
+
+void File::showVerbose(int level){
+    cout << "Show File: " << name << " has size " << size << " Bytes\n";
 }
 
 void File::add(Item* item){

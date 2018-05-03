@@ -6,6 +6,7 @@
 //#include <list>
 
 #include "item.h"
+#include "file.h"
 
 using namespace std;
 
@@ -19,6 +20,7 @@ public:
     virtual const string getName();
     virtual int getSize();
     virtual void show();
+    virtual void showVerbose(int level);
     virtual void add( Item* item);
     virtual void rem( Item* item);
 };
