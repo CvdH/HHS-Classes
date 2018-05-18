@@ -1,5 +1,6 @@
 *.rar
 build-*/
+.vpprefdata/
 
 #################
 ## Eclipse

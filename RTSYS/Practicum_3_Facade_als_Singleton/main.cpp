@@ -1,9 +1,9 @@
 #include <iostream>
-
-using namespace std;
+#include "subsystem.h"
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    Application A;
+    A.use(Library::get());
     return 0;
 }
