@@ -17,7 +17,7 @@ private:
     Member* M;
     Book*   B;
 public:
-    Loan(Member* m, Book* b, string d, string w) : M(m), B(b), Date(d), Weeks(w){}
+    Loan(Member* m, Book* b, string d, int w) : M(m), B(b), Date(d), Weeks(w){}
     virtual ~Loan(){}
 
     virtual string getDate()    const {return Date; }

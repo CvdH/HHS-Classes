@@ -5,7 +5,10 @@ CONFIG -= qt
 
 SOURCES += \
         main.cpp \
-    subsystem.cpp
+    subsystem.cpp \
+    libraryfacadeimpl.cpp
 
 HEADERS += \
-    subsystem.h
+    subsystem.h \
+    libraryfacade.h \
+    libraryfacadeimpl.h
