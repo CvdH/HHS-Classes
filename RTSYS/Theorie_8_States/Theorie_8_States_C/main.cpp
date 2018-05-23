@@ -1,10 +1,13 @@
-#include <iostream>
 
+#include <iostream>
+#include "audioinstallatie.h"
 using namespace std;
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    CDspeler CD;
+    AudioInstallatie M;
+    M.playCD ( &CD );
     return 0;
 }
 
