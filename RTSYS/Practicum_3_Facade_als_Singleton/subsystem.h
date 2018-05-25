@@ -32,7 +32,9 @@ private:
     list<Loan*> L;
     static map<int,Member*> M;
 protected:
-    Member(int n) : Nr(n){M[Nr] = this;}
+    Member(int n) : Nr(n){
+        //M[Nr] = this;
+    }
 public:
     virtual ~Member(){}
     virtual int nr() const          {return Nr;}

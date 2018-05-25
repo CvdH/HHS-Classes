@@ -5,9 +5,9 @@
 
 class LibraryFacadeImpl : public LibraryFacade{
 private:
-    static LibraryFacadeImpl* Instance;
+    static LibraryFacadeImpl* instance;
 protected:
-    LibraryFacadeImpl();
+    LibraryFacadeImpl(){}
     LibraryFacadeImpl(const LibraryFacadeImpl&);
     LibraryFacadeImpl& operator=( const LibraryFacadeImpl&);
 public:
@@ -16,6 +16,7 @@ public:
     void returnBook(int bookNr);
     void showLoans(int memNr);
 };
+
 
 #endif // LIBRARYFACADEIMPL
 

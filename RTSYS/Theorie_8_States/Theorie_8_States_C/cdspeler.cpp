@@ -65,9 +65,11 @@ void CDspeler::event(Event E){
     for(Transition* T : Table){
         if(T->oldState==S && T->event==E){
             Command C;
-            C = T->action;      (this->*C)();
+            C = T->action;
+            (this->*C)();
             S = T->newState;
-            C = T->activity;    (this->*C)();
+            C = T->activity;
+            (this->*C)();
             return;
         }
     }

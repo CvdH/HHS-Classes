@@ -5,13 +5,13 @@
 
 class LibraryFacade{
 private:
-    static LibraryFacade* Instance;
+    //static LibraryFacade* instance;
 protected:
-    LibraryFacade();
-    ~LibraryFacade();
+    LibraryFacade(){}
     LibraryFacade(const LibraryFacade&);
-    virtual LibraryFacade& operator=( const LibraryFacade&) = 0;
+    LibraryFacade& operator=( const LibraryFacade&);
 public:
+    virtual ~LibraryFacade(){}
     static LibraryFacade* getInstance();
     virtual void loanBook(int memNr, int bookNr, string date, int weeks) = 0;
     virtual void returnBook(int bookNr) = 0;

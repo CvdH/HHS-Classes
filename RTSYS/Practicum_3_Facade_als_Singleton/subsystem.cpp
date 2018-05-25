@@ -1,16 +1,20 @@
 #include "subsystem.h"
 #include <iostream>
 
+map<int,Member*> Member::M = {};
+map<int,Book*> Book::B = {};
+
 Member* Member::getMember(int nr){
-    if (L.count(nr)){
-        return L[nr];
+    if( M.count(nr)){
+        return M[nr];
     } else{
-        return L[nr] = new Member(nr);
+        return M[nr] = new Member(nr);
     }
 }
 
 void Member::remMember(Member *m){
-    L.erase(m->nr());
+    //L.erase(m->nr());
+    M.erase(m->nr());
     delete m;
 }
 
@@ -28,9 +32,11 @@ void Book::remBook(Book *b){
 }
 
 void Member::showBooks(){
+    cout << "Member Nr " << Nr << " has loaned the following books:" << endl;
     for(Loan* l : L){
         if(l->getMember() == this){
-            cout << l->getBook()->getNr() << " " << l->getDate() << " " << l->getWeeks() << endl;
+            cout << "Book Nr " << l->getBook()->getNr() << " on " << l->getDate() << " for " << l->getWeeks() << " weeks" << endl;
         }
     }
+    cout << endl;
 }
