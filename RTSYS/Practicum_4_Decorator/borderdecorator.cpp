@@ -1,12 +1,12 @@
 #include "borderdecorator.h"
 
-BorderDecorator::BorderDecorator(Meter* m) : component(m)
+BorderDecorator::BorderDecorator(Meter* m) : DecoratedMeter(m)
 {
 
 }
 
 void BorderDecorator::toon(float w){
-    cout << "----------------------------" << endl;
-    component->toon(w);
-    cout << "----------------------------" << endl;
+    cout << "----------------------------------------" << endl;
+    DecoratedMeter::toon(w);
+    cout << "----------------------------------------" << endl;
 }

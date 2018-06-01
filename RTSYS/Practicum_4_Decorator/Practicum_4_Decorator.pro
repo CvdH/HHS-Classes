@@ -9,7 +9,8 @@ SOURCES += \
     digitalemeter.cpp \
     borderdecorator.cpp \
     voortextdecorator.cpp \
-    natextdecorator.cpp
+    natextdecorator.cpp \
+    decoratedmeter.cpp
 
 HEADERS += \
     meter.h \
@@ -18,4 +19,5 @@ HEADERS += \
     borderdecorator.h \
     voortextdecorator.h \
     snelheid.h \
-    natextdecorator.h
+    natextdecorator.h \
+    decoratedmeter.h

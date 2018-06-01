@@ -1,12 +1,12 @@
 #ifndef VOORTEXTDECORATOR_H
 #define VOORTEXTDECORATOR_H
 
-#include "meter.h"
+#include "decoratedmeter.h"
 
-class VoorTextDecorator : public Meter
+class VoorTextDecorator : public DecoratedMeter
 {
 private:
-    Meter* component;
+    //Meter* component;
     string voortext;
 public:
     VoorTextDecorator(Meter* m, string s);

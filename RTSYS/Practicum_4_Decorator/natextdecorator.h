@@ -1,11 +1,11 @@
 #ifndef NATEXTDECORATOR_H
 #define NATEXTDECORATOR_H
 
-#include "meter.h"
+#include "decoratedmeter.h"
 
-class NaTextDecorator : public Meter{
+class NaTextDecorator : public DecoratedMeter{
 private:
-    Meter* component;
+    //Meter* component;
     string natext;
 public:
     NaTextDecorator(Meter* m, string s);

@@ -1,11 +1,11 @@
 #ifndef BORDERDECORATOR_H
 #define BORDERDECORATOR_H
 
-#include "meter.h"
+#include "decoratedmeter.h"
 
-class BorderDecorator : public Meter{
+class BorderDecorator : public DecoratedMeter{
 private:
-    Meter* component;
+    //Meter* component;
 public:
     BorderDecorator(Meter* m);
     void toon(float w);

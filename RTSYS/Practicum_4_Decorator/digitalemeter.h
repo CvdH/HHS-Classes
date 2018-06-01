@@ -5,8 +5,8 @@
 
 class DigitaleMeter : public Meter{
 public:
-    DigitaleMeter();
-    virtual ~DigitaleMeter();
+    //DigitaleMeter();
+    //virtual ~DigitaleMeter();
     void toon(float w);
 };
 

@@ -8,7 +8,7 @@ using namespace std;
 
 class Meter{
 public:
-    virtual ~Meter();
+    virtual ~Meter(){}
     virtual void toon(float w) = 0;
 };
 

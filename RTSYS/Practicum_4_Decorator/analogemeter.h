@@ -5,8 +5,8 @@
 
 class AnalogeMeter : public Meter{
 public:
-    AnalogeMeter();
-    virtual ~AnalogeMeter();
+    //AnalogeMeter();
+    //virtual ~AnalogeMeter();
     void toon(float w);
 };
 
